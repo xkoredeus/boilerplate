@@ -1,0 +1,19 @@
+.section {
+  &--inner {
+    padding: 70px 0;
+
+    @include r(1200) {
+      padding: 35px 0
+    }
+  }
+
+  &__title {
+    font-family: $Arimo;
+    font-size: 55px;
+    line-height: 1;
+
+    @include r(1200) {
+      font-size: 28px;
+    }
+  }
+}

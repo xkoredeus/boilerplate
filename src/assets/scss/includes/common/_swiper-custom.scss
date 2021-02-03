@@ -1,0 +1,133 @@
+.swiper-button {
+  &-prev,
+  &-next {
+    position: relative;
+    width: 109px;
+    height: 109px;
+    padding: 0;
+    border: 1px solid $blue;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include ease;
+    z-index: 11;
+    outline: none;
+    box-shadow: none;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    margin: auto;
+
+    @include r(1200) {
+      width: 72px;
+      height: 72px;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    svg {
+      position: relative;
+      fill: none;
+      stroke: $white;
+      @include ease;
+
+      @include r(1200) {
+        max-height: 15px;
+      }
+    }
+
+    &:hover {
+      background-color: $tr;
+
+      svg {
+        stroke: $dblue;
+      }
+    }
+
+    &:focus,
+    &:active {
+      box-shadow: unset;
+    }
+
+
+    &.swiper-button-disabled {
+      opacity: 0;
+    }
+  }
+
+  &-prev {
+    svg {
+      transform: translateX(-3px);
+    }
+  }
+  &-next {
+    svg {
+      transform: translateX(3px);
+    }
+  }
+
+  &--white {
+    background-color: $white;
+    border-color: $blue;
+
+    svg {
+      stroke: $dark;
+    }
+
+    &:hover {
+      border-color: $white;
+
+      svg {
+        stroke: $white;
+      }
+    }
+  }
+}
+
+.swiper-navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+//.swiper-container > .swiper-pagination {
+//  bottom: 90px;
+//
+//  .swiper-pagination-bullet {
+//    width: 48px;
+//    height: 5px;
+//    background-color: #fff;
+//    opacity: 1;
+//    border-radius: 0;
+//    @include ease;
+//
+//    @include r(1200) {
+//      width: 25px;
+//      height: 5px;
+//
+//      @include r(1200) {
+//        width: 6px;
+//      }
+//    }
+//
+//    &:not(:last-child) {
+//      margin-right: 20px;
+//
+//      @include r(1200) {
+//        margin-right: 10px;
+//      }
+//    }
+//
+//    &-active {
+//      width: 125px;
+//      background-color: $green;
+//
+//      @include r(1200) {
+//        width: 25px;
+//      }
+//    }
+//  }
+//}
