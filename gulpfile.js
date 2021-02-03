@@ -60,7 +60,6 @@ gulp.task('watch', ['sass'], function () {
     gulp.watch(['src/assets/js/**/*.js'], ['scripts', browserSync.reload]);
     gulp.watch(['src/assets/scss/**/*'], ['sass', browserSync.reload]);
     gulp.watch(['src/assets/img/**/*'], ['images']);
-    gulp.watch(['src/assets/video/**/*'], ['video']);
     gulp.watch(['src/**/*.html'], ['resetPages', 'compile-html', browserSync.reload]);
     console.log('Watching for changes');
 });
